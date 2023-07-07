@@ -1,0 +1,57 @@
+{
+    "taskDefinitionArn": "arn:aws:ecs:us-west-1:600212475952:task-definition/CloudContainerHelloWorld:1",
+    "containerDefinitions": [
+        {
+            "name": "CloudContainerHelloWorld",
+            "image": "600212475952.dkr.ecr.us-west-1.amazonaws.com/node-project:latest",
+            "cpu": 0,
+            "portMappings": [
+                {
+                    "name": "cloudcontainerhelloworld-3000-tcp",
+                    "containerPort": 3000,
+                    "hostPort": 1000,
+                    "protocol": "tcp",
+                    "appProtocol": "http"
+                }
+            ],
+            "essential": true,
+            "environment": [],
+            "environmentFiles": [],
+            "mountPoints": [],
+            "volumesFrom": [],
+            "ulimits": []
+        }
+    ],
+    "family": "CloudContainerHelloWorld",
+    "executionRoleArn": "arn:aws:iam::600212475952:role/ecsTaskExecutionRole",
+    "revision": 1,
+    "volumes": [],
+    "status": "ACTIVE",
+    "requiresAttributes": [
+        {
+            "name": "com.amazonaws.ecs.capability.ecr-auth"
+        },
+        {
+            "name": "ecs.capability.execution-role-ecr-pull"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.18"
+        }
+    ],
+    "placementConstraints": [],
+    "compatibilities": [
+        "EC2"
+    ],
+    "requiresCompatibilities": [
+        "EC2"
+    ],
+    "cpu": "1024",
+    "memory": "3072",
+    "runtimePlatform": {
+        "cpuArchitecture": "X86_64",
+        "operatingSystemFamily": "LINUX"
+    },
+    "registeredAt": "2023-07-07T19:03:20.023Z",
+    "registeredBy": "arn:aws:iam::600212475952:root",
+    "tags": []
+}
