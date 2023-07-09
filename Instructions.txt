@@ -112,7 +112,7 @@ copy the public ipv4 that was generated for your instance and open in a browser 
 Should be showed the Hello World of your application
 
 =================================================
-8) ERASE THE RESOURCER
+8) ERASE THE RESOURCES
 
 In your cluster, in tab Tasks, click on the checkbox of the task you created.
 
