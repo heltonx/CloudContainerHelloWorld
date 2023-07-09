@@ -4,7 +4,7 @@ aws account
 aws cli (with a user configurated)
 docker
 npm
-
+=================================================
 1) STARTING THE PROJECT LOCALLY
 
 Donwload the git project;
@@ -21,7 +21,7 @@ docker build -t CloudContainerHelloWorld .
 Run the Docker container (this step is just for test locally if the project is running ok):
 docker run -d --name node-container -p 3000:3000 CloudContainerHelloWorld
 
-
+=================================================
 2) UPLOAD YOUR PROJECT TO AN AWS DIRECTORY
 
 Access the service AWS ECR
@@ -44,7 +44,7 @@ Do the comands according the instructions
 
 Confirm if the image was succesfully uploaded at the public repository you created
 
-
+=================================================
 3) CREATE CLUSTER
 
 Access the Service ECS
@@ -64,17 +64,19 @@ At Desired capacity, put Minimum as 1 and Maximum as 1 as well
 At EC2 instance type, select t3.large
 
 Click on Create
-
-4) UPLOAD TASK DEFINITION
+=================================================
+4) CREATE TASK DEFINITION
 
 At lateral panel, go to Task definitions
 
 click on Create new task definition with JSON
 
-Erase te content of the field and paste the content of the file CloudContainerHelloWorld
+Erase te content of the box and paste the content of the file CloudContainerHelloWorld.json
 
 Click on Create
 
+Obs.: If you want to create the task definition manually, go to the section OPTIONAL before continue this tutorial
+=================================================
 5) CREATE TASK
 
 Go back to the Cluster you have recently created and click on it
@@ -86,7 +88,7 @@ Click on Run new task
 At the field Family, just select the task definition you have recently created.
 
 Click on Create.
-
+=================================================
 6) EDIT EC2 RULE
 
 Go to service EC2
@@ -102,14 +104,14 @@ In Inbound rules, click on Edit inbound rules
 Add a Rule: Type Custum TCP; Protocol TCP; Port range 1000, Source Anywhere IPv4 (after the lab you can delete this Rule).
 
 Click on Save rules
-
+=================================================
 7) TEST
 
 copy the public ipv4 that was generated for your instance and open in a browser with the port 1000
 
 Should be showed the Hello World of your application
 
-
+=================================================
 8) ERASE THE RESOURCER
 
 In your cluster, in tab Tasks, click on the checkbox of the task you created.
@@ -117,7 +119,6 @@ In your cluster, in tab Tasks, click on the checkbox of the task you created.
 Go to Stop button and click on Stop selected. Again, click on Stop.
 
 At top of the screen, click on Delete cluster. Enter the phrase given and click on Delete.
-
 
 Go to Task definitions menu;
 
@@ -136,4 +137,39 @@ Click again on the checkbox of the Task definition: revision you were using.
 Click on Actions and Delete. Enter the phrase given and click on Delete.
 
 
+=================================================
+(OPTIONAL) - CREATING TASK DEFINITION MANUALLY
 
+At lateral panel, go to Task definitions
+
+click on Create new task definition
+
+At Task definition family, choose a name for your task definition
+
+At Container details, in the field Name choose a name for your repository
+
+open a new tab and go back to ECR
+
+go and click on your public repository you have uploaded your image previously
+
+Inside it, go to the column Image Uri and click on Copy URI
+
+Go back to the tab where you were creating your Definition Task
+
+In Container details, at the field Image URI, paste the URI you copied from your repository
+
+In Port mappings, at Container port fiel, change the port number to 3000 (because is the port where the node app is listening)
+
+Click on Next
+
+At App environment field, click on X to remove the AWS Fargate (serverless) option; instead, select the option Amazon EC2 instances.
+
+At Network mode field, select the option default
+
+Click on Next
+
+At the screen Review and create, click on the button Edit
+
+Go to section Port mappings, and at the field Host port, write 1000
+
+Go clicking on Next until the last screen an finally click on Create
