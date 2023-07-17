@@ -16,10 +16,13 @@ Install Express, a popular Node.js framework, as a dependency:
 npm install express
    
 Build the Docker image:
-docker build -t CloudContainerHelloWorld .
+docker build -t cloudcontainer-helloworld:v1 .
    
 Run the Docker container (this step is just for test locally if the project is running ok):
-docker run -d --name node-container -p 3000:3000 CloudContainerHelloWorld
+docker run -d --name node-container -p 3000:3000 cloudcontainer-helloworld:v1
+
+Test on your web browser:
+http://localhost:3000
 
 =================================================
 2) UPLOAD YOUR PROJECT TO AN AWS DIRECTORY
