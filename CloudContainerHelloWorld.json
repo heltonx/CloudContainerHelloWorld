@@ -1,5 +1,4 @@
 {
-    "taskDefinitionArn": "arn:aws:ecs:us-west-1:600212475952:task-definition/CloudContainerHelloWorld:1",
     "containerDefinitions": [
         {
             "name": "CloudContainerHelloWorld",
@@ -24,24 +23,8 @@
     ],
     "family": "CloudContainerHelloWorld",
     "executionRoleArn": "arn:aws:iam::600212475952:role/ecsTaskExecutionRole",
-    "revision": 1,
     "volumes": [],
-    "status": "ACTIVE",
-    "requiresAttributes": [
-        {
-            "name": "com.amazonaws.ecs.capability.ecr-auth"
-        },
-        {
-            "name": "ecs.capability.execution-role-ecr-pull"
-        },
-        {
-            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.18"
-        }
-    ],
     "placementConstraints": [],
-    "compatibilities": [
-        "EC2"
-    ],
     "requiresCompatibilities": [
         "EC2"
     ],
@@ -51,7 +34,5 @@
         "cpuArchitecture": "X86_64",
         "operatingSystemFamily": "LINUX"
     },
-    "registeredAt": "2023-07-07T19:03:20.023Z",
-    "registeredBy": "arn:aws:iam::600212475952:root",
     "tags": []
 }
