@@ -139,6 +139,9 @@ Click again on the checkbox of the Task definition: revision you were using.
 
 Click on Actions and Delete. Enter the phrase given and click on Delete.
 
+On the ECR, check the box of your repository name.
+
+Click on Delete. Enter the phrase given and click on Delete.
 
 =================================================
 (OPTIONAL) - CREATING TASK DEFINITION MANUALLY
