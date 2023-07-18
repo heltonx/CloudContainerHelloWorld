@@ -1,12 +1,12 @@
 {
     "containerDefinitions": [
         {
-            "name": "CloudContainerHelloWorld",
-            "image": "600212475952.dkr.ecr.us-west-1.amazonaws.com/cloudcontainer-helloworld:latest",
+            "name": "cloudcontainer-helloworld",
+            "image": "public.ecr.aws/q6v3e4i1/cloudcontainer-helloworld:latest",
             "cpu": 0,
             "portMappings": [
                 {
-                    "name": "cloudcontainerhelloworld-3000-tcp",
+                    "name": "cloudcontainer-helloworld-3000-tcp",
                     "containerPort": 3000,
                     "hostPort": 1000,
                     "protocol": "tcp",
@@ -21,7 +21,7 @@
             "ulimits": []
         }
     ],
-    "family": "CloudContainerHelloWorld",
+    "family": "cloudcontainer-helloworld",
     "executionRoleArn": "arn:aws:iam::600212475952:role/ecsTaskExecutionRole",
     "volumes": [],
     "placementConstraints": [],
