@@ -5,6 +5,7 @@ aws cli (with a user configurated)
 docker
 npm
 =================================================
+
 1) STARTING THE PROJECT LOCALLY
 
 Donwload the git project;
