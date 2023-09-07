@@ -54,6 +54,7 @@ docker tag cloudcontainer-helloworld:v1 public.ecr.aws/[repository id]/cloudcont
 Confirm if the image was succesfully uploaded at the public repository you created
 
 =================================================
+
 3) CREATE CLUSTER
 
 Access the Service ECS
