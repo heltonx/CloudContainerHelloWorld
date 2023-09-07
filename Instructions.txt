@@ -26,6 +26,7 @@ Test on your web browser:
 http://localhost:3000
 
 =================================================
+
 2) UPLOAD YOUR PROJECT TO AN AWS DIRECTORY
 
 Access the service AWS ECR
