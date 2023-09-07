@@ -86,6 +86,7 @@ Erase te content of the box and paste the content of the file cloudcontainer-hel
 Click on Create
 
 Obs.: If you want to create the task definition manually, go to the section OPTIONAL before continue this tutorial
+
 =================================================
 5) CREATE TASK
 
