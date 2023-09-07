@@ -88,6 +88,7 @@ Click on Create
 Obs.: If you want to create the task definition manually, go to the section OPTIONAL before continue this tutorial
 
 =================================================
+
 5) CREATE TASK
 
 Go back to the Cluster you have recently created and click on it
