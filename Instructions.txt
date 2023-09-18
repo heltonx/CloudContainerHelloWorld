@@ -1,4 +1,4 @@
-PRE-REQUISITES
+PRE-REQUISITES:
 
 aws account
 aws cli (with a user configurated)
