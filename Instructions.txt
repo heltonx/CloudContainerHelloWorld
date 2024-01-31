@@ -1,9 +1,10 @@
 PRE-REQUISITES:
 
 aws account
-aws cli (with a user configurated)
+install aws cli (with a user configurated)
 docker
 npm
+
 =================================================
 
 1) STARTING THE PROJECT LOCALLY
@@ -27,31 +28,31 @@ http://localhost:3000
 
 =================================================
 
-2) UPLOAD YOUR PROJECT TO AN AWS DIRECTORY
+2) UPLOAD YOUR PROJECT TO AN AWS REPOSITORY
 
-Access the service AWS ECR
+Access the service AWS ECR;
 
-Select the tab Public (Public Repositories)
+Select the tab Public (Public Repositories);
 
-Click on Create Repository
+Click on Create Repository;
 
-At Visibility settings, keep selected the radio button Public
+At Visibility settings, keep selected the radio button Public;
 
-At Repository name, choose a name for you repository and write in the field (suggestion: cloudcontainer-helloworld)
+At Repository name, choose a name for you repository and write in the field (suggestion: cloudcontainer-helloworld);
 
-Click on Create repository
+Click on Create repository;
 
-At your terminal, confirm if you are logged at your aws cli (command: aws sts get-caller-identity)
+At your terminal, confirm if you are logged at your aws cli (command: aws sts get-caller-identity);
 
-At your AWS Console, click on the respository you created
+At your AWS Console, click on the respository you created;
 
-Click on View push commands
+Click on View push commands;
 
 Do the comands according the instructions
 Important: at step 2 [in the push comands there in aws console] you can skip if you already did the build as instructed here. And at step three you have to change the source image [the first one] by the version v1. The target you can keep as latest:
 docker tag cloudcontainer-helloworld:v1 public.ecr.aws/[repository id]/cloudcontainer-helloworld:latest
 
-Confirm if the image was succesfully uploaded at the public repository you created
+Confirm if the image was succesfully uploaded at the public repository you created.
 
 =================================================
 
